@@ -10,13 +10,13 @@ class Cluster extends BaseCluster {
     double? y,
     int? id,
     int? pointsSize,
-    String? childMarkerId,
+    List<String> childMarkerIds = [],
   }) {
     this.x = x;
     this.y = y;
     this.id = id;
     this.pointsSize = pointsSize;
-    this.childMarkerId = childMarkerId;
+    this.childMarkerIds = childMarkerIds;
 
     isCluster = true;
     zoom = 24; // Max value.

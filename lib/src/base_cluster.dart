@@ -16,5 +16,5 @@ class BaseCluster {
   String? markerId;
 
   /// For clusters that wish to display one representation of its children.
-  String? childMarkerId;
+  List<String> childMarkerIds = [];
 }
