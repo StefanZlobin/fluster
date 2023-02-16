@@ -1,4 +1,8 @@
-## [1.2.0] - 2021-04-23
+## [1.3.0] - 2023-02-17
+
+- Store multiple child marker ids
+
+# [1.2.0] - 2021-04-23
 
 - Added Dart null safety feature
 
