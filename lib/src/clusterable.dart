@@ -35,5 +35,5 @@ abstract class Clusterable {
       this.clusterId,
       this.pointsSize,
       this.markerId,
-      this.childMarkerIds});
+      this.childMarkerIds = const []});
 }

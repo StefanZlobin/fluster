@@ -208,12 +208,10 @@ class Fluster<T extends Clusterable> {
       var wx = (p.x ?? 0.0) * pointsSize;
       var wy = (p.y ?? 0.0) * pointsSize;
 
-      late List<String> childMarkerIds;
-      if (p.childMarkerIds.isNotEmpty) {
-        childMarkerIds = [...p.childMarkerIds, p.markerId];
-      } else {
-        childMarkerIds = [p.markerId];
-      }
+      List<String> childMarkerIds = [
+        ...p.childMarkerIds,
+        if (p.markerId != null) p.markerId!,
+      ];
 
       var id = (i << 5) + (zoom + 1);
 
@@ -234,6 +232,10 @@ class Fluster<T extends Clusterable> {
 
         pointsSize += pointsSize2;
         b.parentId = id;
+        childMarkerIds.addAll([
+          ...b.childMarkerIds,
+          if (b.markerId != null) b.markerId!,
+        ]);
       }
 
       if (pointsSize == 1) {

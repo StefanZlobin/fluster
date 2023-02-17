@@ -10,7 +10,7 @@ class Cluster extends BaseCluster {
     double? y,
     int? id,
     int? pointsSize,
-    List<String> childMarkerIds = [],
+    List<String> childMarkerIds = const [],
   }) {
     this.x = x;
     this.y = y;
